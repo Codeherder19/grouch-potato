@@ -34,7 +34,7 @@ script:
   - npm start &
   - npm run start:ci &
   # # run all Cypress tests and record on the dashboard
-  - npm run cy:run -- --record --key
+  - npm run cy:run -- --record --key 557f9711-1a91-4972-bf73-6bef1b102976
   # KEY GOES HERE
   # after all tests finish running we need
   # # to kill all background jobs (like "npm start &")
