@@ -27,18 +27,16 @@ cache:
 
   install:
     - npm ci
-    - npm run build
-
-before_script:
-  - npm start-- --silent &
+    # - npm run build
 
 script:
-  - $(npm bin)/cypress run
   # # start server in the background
+  - npm start &
   - npm run start:ci &
   # # run all Cypress tests and record on the dashboard
-  - npm run cy:run -- --record
-  # # after all tests finish running we need
+  - npm run cy:run -- --record --key
+  # KEY GOES HERE
+  # after all tests finish running we need
   # # to kill all background jobs (like "npm start &")
   # # this avoids flake in Travis jobs
   - kill $(jobs -p) || true

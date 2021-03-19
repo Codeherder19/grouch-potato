@@ -24,7 +24,9 @@
     "start:ci:windows": "serve --no-clipboard --listen 8080",
     "cy:run": "cypress run",
     "cy:run:record": "cypress run --record",
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "local:open": "start-test 3000 cy:open",
+    "local:run": "start-test 3000 cy:run",
   },
   "eslintConfig": {
     "extends": [
